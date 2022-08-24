@@ -1,0 +1,33 @@
+
+Join Format
+
+Select
+
+Table1.coloumn1, Table1.coloumn2, 
+Table2.coloumn3 ( this is the coloumn you want to display)
+
+From Table1
+Join Table2
+
+0n Table1.coloumnx=Table2.coloumnx (similar data in both of them)
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+You can join table to itself, yes!
+# https://learnsql.com/blog/how-to-join-same-table-twice/#:~:text=We%20keep%20five%20columns%20from,JOIN%20%2C%20CROSS%20JOIN%20%2C%20etc.
+
+select cust.customer_id,
+      cust.firstname,
+      cust.lastname,
+      cust.birthdate,
+      cust.spouse_id,
+      spouse.firstname as spouse_firstname,
+      spouse.lastname as spouse_lastname
+from customer cust
+join customer spouse
+on cust.spouse_id = spouse.customer_id;
+
+So basically for join to work you must have a similar data that you are extracting for equal function
+
+
+This is the SQl 
